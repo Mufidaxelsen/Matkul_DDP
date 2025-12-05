@@ -18,5 +18,5 @@ class Gempa:
             ket = "Bangunan pada roboh"
         else:
             ket = "Berpotensi Tsunami"
-        print(f'telah terjadi Gempa di {self.lokasi} dengan skala {self.skala} Ritcher, berdampak {self.dampak}')
+        print(f'telah terjadi Gempa di {self.lokasi} dengan skala {self.skala} Ritcher, berdampak {ket} ')
         
