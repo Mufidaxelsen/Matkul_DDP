@@ -1,0 +1,32 @@
+class Bank:
+    # member1 Variabel 1
+
+    norek = ''
+    nama = ''
+    saldo = 0
+    jmlNasabah = 0 #Variabel static
+    BANK = 'Bank Syariah Nurul Fikri'
+
+    # member2 konstruktor
+    def __init__(self,no,nasabah,saldo):
+        self.norek = no
+        self.nama = nasabah
+        self.saldo = saldo
+        Bank.jmlNasabah += 1
+
+    #member3 method
+    def nabung(self,uang):
+    #self.saldo = self.saldo + uang
+        self.saldo += uang
+    def tarik(self,uang):
+    #self.saldo = self.saldo - uang
+        self.saldo -= uang
+    def cetak(self):
+        print(Bank.BANK,
+            '\n==========================',
+            '\nNo. Rekening\t:',self.norek,
+            '\nNama Nasabah\t:',self.nama,
+            '\nSaldo\t\t: Rp. '
+            ,format(self.saldo, ','),
+            '\n--------------------------'
+            )
